@@ -1,0 +1,151 @@
+!DOCTYPE html
+html lang=en
+head
+	titleMagnetic - Stunning Responsive HTML5CSS3 Photography Wensite Templatetitle
+	meta charset=utf-8
+	meta name=author content=pixelhint.com
+	meta name=description content=Magnetic is a stunning responsive HTML5CSS3 photographyportfolio website template
+	meta name=viewport content=width=device-width, initial-scale=1.0, minimum-scale=1.0 
+	link rel=stylesheet type=textcss href=cssreset.css
+	link rel=stylesheet type=textcss href=cssmain.css
+    script type=textjavascript src=jsjquery.jsscript
+    script type=textjavascript src=jsmain.jsscript
+head
+body
+
+	header
+		div class=logo
+			a href=index.htmlimg src=imglogo.png title=Magnetic alt=Magnetica
+		div!-- end logo --
+
+		div id=menu_icondiv
+		nav
+			ul
+				lia href=index.html class=selectedHomeali
+				lia href=#Aboutali
+				lia href=#The Teamali
+				lia href=#Journalali
+				lia href=contact.htmlContact Usali
+			ul
+		nav!-- end navigation menu --
+
+		div class=footer clearfix
+			ul class=social clearfix
+				lia href=# class=fb data-title=Facebookali
+				lia href=# class=google data-title=Google +ali
+				lia href=# class=behance data-title=Behanceali
+				!--lia href=# class=twitter data-title=Twitterali
+				lia href=# class=dribble data-title=Dribbleali--
+				lia href=# class=rss data-title=RSSali
+			ul!-- end social --
+
+			div class=rights
+				pCopyright © 2014 magnetic.p
+				pTemplate by a href=Pixelhint.comap
+			div!-- end rights --
+		div !-- end footer --
+	header!-- end header --
+
+	section class=main clearfix
+		div class=work
+			a href=inner.html
+				img src=imgwork1.jpg class=media alt=
+				div class=caption
+					div class=work_title
+						h1culpa qui officia deserunt mollith1
+					div
+				div
+			a
+		div
+
+		div class=work
+			a href=inner.html
+				img src=imgwork2.jpg class=media alt=
+				div class=caption
+					div class=work_title
+						h1culpa qui officia deserunt mollith1
+					div
+				div
+			a
+		div
+
+		div class=work
+			a href=inner.html
+				img src=imgwork3.jpg class=media alt=
+				div class=caption
+					div class=work_title
+						h1culpa qui officia deserunt mollith1
+					div
+				div
+			a
+		div
+
+		div class=work
+			a href=inner.html
+				img src=imgwork4.jpg class=media alt=
+				div class=caption
+					div class=work_title
+						h1culpa qui officia deserunt mollith1
+					div
+				div
+			a
+		div
+
+		div class=work
+			a href=inner.html
+				img src=imgwork5.jpg class=media alt=
+				div class=caption
+					div class=work_title
+						h1culpa qui officia deserunt mollith1
+					div
+				div
+			a
+		div
+
+		div class=work
+			a href=inner.html
+				img src=imgwork6.jpg class=media alt=
+				div class=caption
+					div class=work_title
+						h1culpa qui officia deserunt mollith1
+					div
+				div
+			a
+		div
+
+		div class=work
+			a href=inner.html
+				img src=imgwork2.jpg class=media alt=
+				div class=caption
+					div class=work_title
+						h1culpa qui officia deserunt mollith1
+					div
+				div
+			a
+		div
+
+		div class=work
+			a href=inner.html
+				img src=imgwork3.jpg class=media alt=
+				div class=caption
+					div class=work_title
+						h1culpa qui officia deserunt mollith1
+					div
+				div
+			a
+		div
+
+		div class=work
+			a href=inner.html
+				img src=imgwork1.jpg class=media alt=
+				div class=caption
+					div class=work_title
+						h1culpa qui officia deserunt mollith1
+					div
+				div
+			a
+		div
+	section!-- end main --
+	
+body
+html
