@@ -1,92 +1,80 @@
-jQuery(document).ready(function( $ ) {
+$(document).ready(function(){
 
-  // Smooth scroll for the menu and links with .scrollto classes
-  $('.smothscroll').on('click', function(e) {
-    e.preventDefault();
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      if (target.length) {
 
-        $('html, body').animate({
-          scrollTop: target.offset().top - 62
-        }, 1500, 'easeInOutExpo');
-      }
+
+    //mobile menu toggling
+    $("#menu_icon").click(function(){
+        $("header nav ul").toggleClass("show_menu");
+        $("#menu_icon").toggleClass("close_menu");
+        return false;
+    });
+
+    
+
+    //Contact Page Map Centering
+    var hw = $('header').width() + 50;
+    var mw = $('#map').width();
+    var wh = $(window).height();
+    var ww = $(window).width();
+
+    $('#map').css({
+        "max-width" : mw,
+        "height" : wh
+    });
+
+    if(ww>1100){
+         $('#map').css({
+            "margin-left" : hw
+        });
     }
-  });
 
-  $('.carousel').carousel({
-    interval: 3500
-  });
+   
 
-  // JavaScript Chart
-  var doughnutData = [{
-      value: 70,
-      color: "#1abc9c"
-    },
-    {
-      value: 30,
-      color: "#ecf0f1"
-    }
-  ];
-  var myDoughnut = new Chart(document.getElementById("javascript").getContext("2d")).Doughnut(doughnutData);
 
-  // Bootstrap Chart
-  var doughnutData = [{
-    value: 90,
-    color: "#1abc9c"
-  },
-  {
-    value: 10,
-    color: "#ecf0f1"
-  }
-  ];
-  var myDoughnut = new Chart(document.getElementById("bootstrap").getContext("2d")).Doughnut(doughnutData);
 
-  // WordPress Chart
-  var doughnutData = [{
-    value: 65,
-    color: "#1abc9c"
-  },
-  {
-    value: 35,
-    color: "#ecf0f1"
-  }
-  ];
-  var myDoughnut = new Chart(document.getElementById("wordpress").getContext("2d")).Doughnut(doughnutData);
+    //Tooltip
+    $("a").mouseover(function(){
 
-  // HTML Chart
-  var doughnutData = [{
-    value: 80,
-    color: "#1abc9c"
-  },
-  {
-    value: 20,
-    color: "#ecf0f1"
-  }
-  ];
-  var myDoughnut = new Chart(document.getElementById("html").getContext("2d")).Doughnut(doughnutData);
+        var attr_title = $(this).attr("data-title");
 
-  // Photoshop Chart
-  var doughnutData = [{
-    value: 70,
-    color: "#1abc9c"
-  },
-  {
-    value: 30,
-    color: "#ecf0f1"
-  }
-  ];
-  var myDoughnut = new Chart(document.getElementById("photoshop").getContext("2d")).Doughnut(doughnutData);
+        if( attr_title == undefined || attr_title == "") return false;
+        
+        $(this).after('<span class="tooltip"></span>');
 
-  // Illustrator Chart
-  var doughnutData = [{
-    value: 50,
-    color: "#1abc9c"
-  },
-  {
-    value: 50,
-    color: "#ecf0f1"
-  }
-  ];
-  var myDoughnut = new Chart(document.getElementById("illustrator").getContext("2d")).Doughnut(doughnutData);
+        var tooltip = $(".tooltip");
+        tooltip.append($(this).data('title'));
+
+         
+        var tipwidth = tooltip.outerWidth();
+        var a_width = $(this).width();
+        var a_hegiht = $(this).height() + 3 + 4;
+
+        //if the tooltip width is smaller than the a/link/parent width
+        if(tipwidth < a_width){
+            tipwidth = a_width;
+            $('.tooltip').outerWidth(tipwidth);
+        }
+
+        var tipwidth = '-' + (tipwidth - a_width)/2;
+        $('.tooltip').css({
+            'left' : tipwidth + 'px',
+            'bottom' : a_hegiht + 'px'
+        }).stop().animate({
+            opacity : 1
+        }, 200);
+       
+
+    });
+
+    $("a").mouseout(function(){
+        var tooltip = $(".tooltip");       
+        tooltip.remove();
+    });
+
+
 });
+
+
+
+
+
